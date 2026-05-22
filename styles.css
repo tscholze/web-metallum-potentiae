@@ -55,7 +55,7 @@ h1 {
 
 .cta {
   display: inline-block;
-  color: #130c0c;
+  color: var(--ink);
   background: var(--gold);
   text-decoration: none;
   padding: 0.7rem 1.2rem;
