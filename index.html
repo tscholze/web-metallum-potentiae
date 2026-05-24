@@ -156,7 +156,8 @@
                     href="#armory">Armory</a>
             </nav>
             <button
-                class="bg-secondary text-on-secondary px-6 py-2 font-label-sm text-label-sm font-bold tracking-widest glint-effect transition-transform duration-200 hover:scale-105 active:scale-95">
+                class="js-playlist-link bg-secondary text-on-secondary px-6 py-2 font-label-sm text-label-sm font-bold tracking-widest glint-effect transition-transform duration-200 hover:scale-105 active:scale-95"
+                data-url="https://www.youtube.com/playlist?list=PLpRS4ME9G-4eF9d9hykSSunmGNyWBuPGr">
                 Join the Legion
             </button>
         </div>
@@ -186,11 +187,13 @@
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <button
-                        class="bg-primary-container text-on-primary-container px-10 py-4 font-headline-lg text-headline-lg-mobile md:text-headline-lg glint-effect border-b-4 border-on-primary-fixed-variant hover:-translate-y-1 transition-all">
+                        class="js-playlist-link bg-primary-container text-on-primary-container px-10 py-4 font-headline-lg text-headline-lg-mobile md:text-headline-lg glint-effect border-b-4 border-on-primary-fixed-variant hover:-translate-y-1 transition-all"
+                        data-url="https://www.youtube.com/playlist?list=PLpRS4ME9G-4eF9d9hykSSunmGNyWBuPGr">
                         JETZT VORBESTELLEN
                     </button>
                     <button
-                        class="bg-transparent border-2 border-secondary text-secondary px-10 py-4 font-headline-lg text-headline-lg-mobile md:text-headline-lg hover:bg-secondary/10 transition-all">
+                        class="js-playlist-link bg-transparent border-2 border-secondary text-secondary px-10 py-4 font-headline-lg text-headline-lg-mobile md:text-headline-lg hover:bg-secondary/10 transition-all"
+                        data-url="https://www.youtube.com/playlist?list=PLpRS4ME9G-4eF9d9hykSSunmGNyWBuPGr">
                         DEN RUF HÖREN
                     </button>
                 </div>
@@ -451,6 +454,17 @@
                     e.preventDefault();
                     openTrackUrl();
                 }
+            });
+        });
+
+        // Open selected CTA buttons in a new tab.
+        document.querySelectorAll('.js-playlist-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const url = button.getAttribute('data-url');
+                if (!url) {
+                    return;
+                }
+                window.open(url, '_blank', 'noopener,noreferrer');
             });
         });
     </script>
