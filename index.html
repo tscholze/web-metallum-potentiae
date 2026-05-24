@@ -153,9 +153,9 @@
     <!-- TopAppBar -->
     <header
         class="fixed top-0 z-50 w-full bg-surface-container dark:bg-surface-container-high shadow-heavy border-b-2 border-outline-variant">
-        <div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-full mx-auto">
+        <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-3 md:py-4 max-w-full mx-auto gap-3">
             <div
-                class="font-headline-lg text-headline-lg font-bold text-secondary dark:text-secondary-fixed tracking-widest uppercase">
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-secondary dark:text-secondary-fixed tracking-widest uppercase leading-tight">
                 METALLUM POTENTIAE
             </div>
             <nav class="hidden md:flex items-center gap-8">
@@ -169,15 +169,21 @@
                     href="#armory">Armory</a>
             </nav>
             <button
-                class="js-playlist-link bg-secondary text-on-secondary px-6 py-2 font-label-sm text-label-sm font-bold tracking-widest glint-effect transition-transform duration-200 hover:scale-105 active:scale-95"
+                class="js-playlist-link bg-secondary text-on-secondary px-4 md:px-6 py-2 font-label-sm text-label-sm font-bold tracking-widest glint-effect transition-transform duration-200 hover:scale-105 active:scale-95 whitespace-nowrap"
                 data-url="https://www.youtube.com/playlist?list=PLpRS4ME9G-4eF9d9hykSSunmGNyWBuPGr">
                 Join the Legion
             </button>
         </div>
+        <nav class="md:hidden flex items-center gap-4 overflow-x-auto px-margin-mobile py-3 border-t border-outline-variant bg-surface-container-low">
+            <a class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap" href="#legions">Legions</a>
+            <a class="font-label-sm text-label-sm text-primary border-b-2 border-primary whitespace-nowrap" href="#anthem">War Anthem</a>
+            <a class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap" href="#crusades">Crusades</a>
+            <a class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap" href="#armory">Armory</a>
+        </nav>
     </header>
     <main>
         <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16" id="anthem">
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-16" id="anthem">
             <div class="absolute inset-0 z-0">
                 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/80 z-10">
                 </div>
@@ -187,7 +193,7 @@
             </div>
             <div class="relative z-20 text-center px-margin-mobile md:px-margin-desktop max-w-5xl mx-auto">
                 <h1
-                    class="font-headline-xl text-headline-xl md:text-display-lg font-black text-on-surface mb-6 drop-shadow-lg uppercase tracking-tighter">
+                    class="font-headline-xl text-headline-lg-mobile sm:text-headline-xl md:text-display-lg font-black text-on-surface mb-6 drop-shadow-lg uppercase tracking-tighter">
                     The Debut Album:<br>
                     <span class="text-secondary">Legiones Romanae Metal</span>
                 </h1>
@@ -195,17 +201,22 @@
                     Unleash the wrath of the Empire. A symphony of forged steel, thunderous drums, and
                     the echo of lost battles.
                 </p>
-                                <div class="mb-8 flex justify-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pYyBf0M7d2g?si=Lrr8M0Xt2agB8MGd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="mb-8 flex justify-center px-1">
+                    <div class="w-full max-w-3xl aspect-video border-2 border-outline-variant shadow-heavy bg-surface-container-low">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/pYyBf0M7d2g?si=Lrr8M0Xt2agB8MGd"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <button
-                        class="js-playlist-link bg-primary-container text-on-primary-container px-10 py-4 font-headline-lg text-headline-lg-mobile md:text-headline-lg glint-effect border-b-4 border-on-primary-fixed-variant hover:-translate-y-1 transition-all"
+                        class="js-playlist-link w-full sm:w-auto bg-primary-container text-on-primary-container px-6 md:px-10 py-4 font-headline-lg text-headline-lg-mobile md:text-headline-lg glint-effect border-b-4 border-on-primary-fixed-variant hover:-translate-y-1 transition-all"
                         data-url="https://www.youtube.com/playlist?list=PLpRS4ME9G-4eF9d9hykSSunmGNyWBuPGr">
                         PREORDER NOW
                     </button>
                     <button
-                        class="js-playlist-link bg-transparent border-2 border-secondary text-secondary px-10 py-4 font-headline-lg text-headline-lg-mobile md:text-headline-lg hover:bg-secondary/10 transition-all"
+                        class="js-playlist-link w-full sm:w-auto bg-transparent border-2 border-secondary text-secondary px-6 md:px-10 py-4 font-headline-lg text-headline-lg-mobile md:text-headline-lg hover:bg-secondary/10 transition-all"
                         data-url="https://www.youtube.com/playlist?list=PLpRS4ME9G-4eF9d9hykSSunmGNyWBuPGr">
                         HEAR THE CALL
                     </button>
@@ -218,12 +229,12 @@
             </div>
         </section>
         <!-- Tracklist Section -->
-        <section class="py-section-gap relative" id="armory">
+        <section class="py-16 md:py-section-gap relative" id="armory">
             <div class="absolute inset-0 stone-texture opacity-30 z-0"></div>
             <div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="w-full md:w-1/3">
-                        <div class="sticky top-32">
+                        <div class="md:sticky md:top-32">
                             <h2
                                 class="font-headline-xl text-headline-xl text-secondary mb-6 border-l-8 border-primary-container pl-6">
                                 Codex Metallum
@@ -243,70 +254,70 @@
                         <div class="grid gap-4">
                             <!-- Track Item -->
                             <div
-                                class="js-track-link group flex items-center justify-between p-6 bg-surface-container-low border-b-2 border-outline-variant hover:bg-primary-container transition-all cursor-pointer"
+                                class="js-track-link group flex items-center justify-between p-4 md:p-6 bg-surface-container-low border-b-2 border-outline-variant hover:bg-primary-container transition-all cursor-pointer"
                                 role="link" tabindex="0" aria-label="Open track I in a new tab"
                                 data-url="https://youtu.be/TeYqZliRmDw?si=2ASnMboq7I-SV296">
-                                <div class="flex items-center gap-6">
+                                <div class="flex items-center gap-4 md:gap-6 min-w-0">
                                     <span
                                         class="font-headline-lg text-headline-lg text-outline-variant group-hover:text-primary">I</span>
                                     <h3
-                                        class="font-headline-lg text-headline-lg text-on-surface group-hover:text-white">
+                                        class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface group-hover:text-white leading-tight">
                                          Gloria Ficta</h3>
                                 </div>
                                 <span class="material-symbols-outlined text-secondary group-hover:text-white"
                                     data-weight="fill">play_circle</span>
                             </div>
                             <div
-                                class="js-track-link group flex items-center justify-between p-6 bg-surface-container-low border-b-2 border-outline-variant hover:bg-primary-container transition-all cursor-pointer"
+                                class="js-track-link group flex items-center justify-between p-4 md:p-6 bg-surface-container-low border-b-2 border-outline-variant hover:bg-primary-container transition-all cursor-pointer"
                                 role="link" tabindex="0" aria-label="Open track II in a new tab"
                                 data-url="https://youtu.be/pYyBf0M7d2g?si=ctyZrDbtTpqDPVyx">
-                                <div class="flex items-center gap-6">
+                                <div class="flex items-center gap-4 md:gap-6 min-w-0">
                                     <span
                                         class="font-headline-lg text-headline-lg text-outline-variant group-hover:text-primary">II</span>
                                     <h3
-                                        class="font-headline-lg text-headline-lg text-on-surface group-hover:text-white">
+                                        class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface group-hover:text-white leading-tight">
                                         Vis pugnandi feminina</h3>
                                 </div>
                                 <span class="material-symbols-outlined text-secondary group-hover:text-white"
                                     data-weight="fill">play_circle</span>
                             </div>
                             <div
-                                class="js-track-link group flex items-center justify-between p-6 bg-surface-container-low border-b-2 border-outline-variant hover:bg-primary-container transition-all cursor-pointer"
+                                class="js-track-link group flex items-center justify-between p-4 md:p-6 bg-surface-container-low border-b-2 border-outline-variant hover:bg-primary-container transition-all cursor-pointer"
                                 role="link" tabindex="0" aria-label="Open track III in a new tab"
                                 data-url="https://youtu.be/Lg1Gntm_ySo?si=ILsM24JI_9O6zx0e">
-                                <div class="flex items-center gap-6">
+                                <div class="flex items-center gap-4 md:gap-6 min-w-0">
                                     <span
                                         class="font-headline-lg text-headline-lg text-outline-variant group-hover:text-primary">III</span>
                                     <h3
-                                        class="font-headline-lg text-headline-lg text-on-surface group-hover:text-white">
+                                        class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface group-hover:text-white leading-tight">
                                         Ascensio Legionis</h3>
                                 </div>
                                 <span class="material-symbols-outlined text-secondary group-hover:text-white"
                                     data-weight="fill">play_circle</span>
                             </div>
                             <div
-                                class="js-track-link group flex items-center justify-between p-6 bg-surface-container-low border-b-2 border-outline-variant hover:bg-primary-container transition-all cursor-pointer"
+                                class="js-track-link group flex items-center justify-between p-4 md:p-6 bg-surface-container-low border-b-2 border-outline-variant hover:bg-primary-container transition-all cursor-pointer"
                                 role="link" tabindex="0" aria-label="Open track IV in a new tab"
                                 data-url="https://youtu.be/0mqf-4Alkqw?si=s8fPm9Bym0lOi4rQ">
-                                <div class="flex items-center gap-6">
+                                <div class="flex items-center gap-4 md:gap-6 min-w-0">
                                     <span
                                         class="font-headline-lg text-headline-lg text-outline-variant group-hover:text-primary">IV</span>
                                     <h3
-                                        class="font-headline-lg text-headline-lg text-on-surface group-hover:text-white">
+                                        class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface group-hover:text-white leading-tight">
                                         Vinum Fluit Nocte</h3>
                                 </div>
                                 <span class="material-symbols-outlined text-secondary group-hover:text-white"
                                     data-weight="fill">play_circle</span>
                             </div>
                             <div
-                                class="js-track-link group flex items-center justify-between p-6 bg-surface-container-low border-b-2 border-outline-variant hover:bg-primary-container transition-all cursor-pointer"
+                                class="js-track-link group flex items-center justify-between p-4 md:p-6 bg-surface-container-low border-b-2 border-outline-variant hover:bg-primary-container transition-all cursor-pointer"
                                 role="link" tabindex="0" aria-label="Open track V in a new tab"
                                 data-url="https://youtube.com/playlist?list=PLpRS4ME9G-4eF9d9hykSSunmGNyWBuPGr&si=ZcDy5Hkm-91XZi_K">
-                                <div class="flex items-center gap-6">
+                                <div class="flex items-center gap-4 md:gap-6 min-w-0">
                                     <span
                                         class="font-headline-lg text-headline-lg text-outline-variant group-hover:text-primary">V</span>
                                     <h3
-                                        class="font-headline-lg text-headline-lg text-on-surface group-hover:text-white">
+                                        class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface group-hover:text-white leading-tight">
                                        And many more</h3>
                                 </div>
                                 <span class="material-symbols-outlined text-secondary group-hover:text-white"
@@ -318,17 +329,17 @@
             </div>
         </section>
         <!-- Band Section -->
-        <section class="py-section-gap bg-surface-container-lowest" id="legions">
+        <section class="py-16 md:py-section-gap bg-surface-container-lowest" id="legions">
             <div class="container mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="text-center mb-16">
-                    <h2 class="font-headline-xl text-headline-xl text-on-surface mb-4">The Legionaries</h2>
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-surface mb-4">The Legionaries</h2>
                     <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
                 </div>
                 <div class="relative group overflow-hidden border-4 border-outline-variant shadow-heavy rounded-none">
                     <img class="w-full aspect-video object-cover hover:scale-110 transition-transform duration-700"
                         data-alt="Full band portrait of Metallum Potentiae in high-detail battle armor. Each member holds a different instrument forged from ancient weaponry—drums made of war shields, guitars shaped like scimitars. The backdrop is a burning Roman outpost under a stormy, crimson sky. High-contrast theatrical lighting."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKc7LDtqzRYcrbjxxm_pUj1lLYa2KbqtjiJfB3rQNFs_TNSA1bwOfT7N4j0P4jnjNOi9Yx1aVBvURaXoA4KhKX-bjz8zrGHGFTkFa9N8PJHDUkTaIAJSL2Vbsp51ZQlNEufrDfBjp9smbU1x83Go-tD_j9CpQ6NFN9IQAvZ8L48cQ_T4oxHTPO73QHCkeN-W3ZiiIABjjCSFW6RdXeunIFT9omFDduZhwsdnuoKINXxTSMsIYNikBEHY5gpGZ15fot5KDdxzkgOCo">
-                    <div class="absolute bottom-0 inset-x-0 p-8 bg-gradient-to-t from-background to-transparent">
+                    <div class="absolute bottom-0 inset-x-0 p-4 md:p-8 bg-gradient-to-t from-background to-transparent">
                         <div class="flex flex-wrap gap-4 justify-center">
                             <span
                                 class="bg-surface-container px-6 py-2 border border-secondary text-secondary font-headline-lg text-headline-lg-mobile">Marcus
@@ -351,17 +362,17 @@
             </div>
         </section>
         <!-- Tour Section -->
-        <section class="py-section-gap relative overflow-hidden" id="crusades">
+        <section class="py-16 md:py-section-gap relative overflow-hidden" id="crusades">
             <div class="absolute inset-0 bg-primary-container/10 z-0 pointer-events-none"></div>
             <div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
                 <h2
-                    class="font-headline-xl text-headline-xl text-on-surface text-center mb-16 uppercase tracking-widest">
+                    class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-surface text-center mb-10 md:mb-16 uppercase tracking-widest">
                     Campaigns MMXXIV
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- City Card -->
                     <div
-                        class="group bg-surface-container-high p-10 text-center border-t-4 border-secondary hover:border-primary transition-all hover:-translate-y-2 shadow-heavy">
+                        class="group bg-surface-container-high p-6 md:p-10 text-center border-t-4 border-secondary hover:border-primary transition-all hover:-translate-y-2 shadow-heavy">
                         <span class="material-symbols-outlined text-primary text-5xl mb-4">castle</span>
                         <h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">ROMA</h3>
                         <p class="font-label-sm text-label-sm text-on-surface-variant mb-6">CIRCUS MAXIMUS</p>
@@ -370,7 +381,7 @@
                             class="mt-8 w-full py-3 bg-secondary text-on-secondary font-bold hover:bg-primary transition-colors">TICKETS</button>
                     </div>
                     <div
-                        class="group bg-surface-container-high p-10 text-center border-t-4 border-secondary hover:border-primary transition-all hover:-translate-y-2 shadow-heavy">
+                        class="group bg-surface-container-high p-6 md:p-10 text-center border-t-4 border-secondary hover:border-primary transition-all hover:-translate-y-2 shadow-heavy">
                         <span class="material-symbols-outlined text-primary text-5xl mb-4">account_balance</span>
                         <h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">AUG. VINDELICORUM</h3>
                         <p class="font-label-sm text-label-sm text-on-surface-variant mb-6">ARENA AUGUSTA</p>
@@ -379,7 +390,7 @@
                             class="mt-8 w-full py-3 bg-secondary text-on-secondary font-bold hover:bg-primary transition-colors">TICKETS</button>
                     </div>
                     <div
-                        class="group bg-surface-container-high p-10 text-center border-t-4 border-secondary hover:border-primary transition-all hover:-translate-y-2 shadow-heavy">
+                        class="group bg-surface-container-high p-6 md:p-10 text-center border-t-4 border-secondary hover:border-primary transition-all hover:-translate-y-2 shadow-heavy">
                         <span class="material-symbols-outlined text-primary text-5xl mb-4">temple_buddhist</span>
                         <h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">LUTETIA</h3>
                         <p class="font-label-sm text-label-sm text-on-surface-variant mb-6">THEATRUM FLAVIANUM</p>
@@ -391,15 +402,15 @@
             </div>
         </section>
         <!-- Newsletter Section (Custom Add for Depth) -->
-        <section class="py-section-gap bg-surface-container-high border-y-2 border-outline-variant">
+        <section class="py-16 md:py-section-gap bg-surface-container-high border-y-2 border-outline-variant">
             <div class="max-w-4xl mx-auto px-margin-mobile text-center">
-                <h2 class="font-headline-lg text-headline-lg text-primary mb-4 uppercase">Join the Legion
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 uppercase">Join the Legion
                 </h2>
                 <p class="font-body-md text-body-md text-on-surface mb-8">Receive dispatches about new battles,
                     exclusive spoils and secret gatherings directly in your tablinum.</p>
                 <form class="flex flex-col sm:flex-row gap-0 border-2 border-secondary overflow-hidden shadow-heavy">
                     <input
-                        class="flex-grow bg-surface border-none px-6 py-4 font-label-sm text-label-sm text-on-surface focus:ring-0"
+                        class="flex-grow bg-surface border-none px-6 py-4 font-label-sm text-label-sm text-on-surface focus:ring-0 min-w-0"
                         placeholder="YOUR@ADDRESS.ROM" type="email">
                     <button
                         class="bg-secondary text-on-secondary px-8 py-4 font-bold tracking-widest glint-effect hover:bg-primary hover:text-white transition-all uppercase">Enlist</button>
@@ -410,7 +421,7 @@
     <!-- Footer -->
     <footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant">
         <div
-            class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-section-gap max-w-full mx-auto gap-8">
+            class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap max-w-full mx-auto gap-8">
             <div class="font-headline-lg text-headline-lg text-secondary uppercase font-bold tracking-widest">
                 METALLUM POTENTIAE
             </div>
