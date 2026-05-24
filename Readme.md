@@ -6,7 +6,7 @@
 
 | Project      | Action |
 | ------------ | ------ |
-| GitHub Pages | -      |
+| GitHub Pages | [![Deploy static content to Pages](https://github.com/tscholze/web-metallum-potentiae/actions/workflows/static.yml/badge.svg)](https://github.com/tscholze/web-metallum-potentiae/actions/workflows/static.yml)      |
 
 
 ## How it looks
