@@ -1,13 +1,17 @@
 # Metallum Potentiae
 
-Epic one-page promo site for the fictional Roman metal project **METALLUM POTENTIAE**.
+> Epic one-page promo site for the fictional Roman metal project **METALLUM POTENTIAE**.
 
-## Files
+## Build status
 
-- `index.html`: Original German page.
-- `index_en.html`: English translation of the same page content.
-- `.gitignore`: Common macOS/editor/build exclusions.
-- `LICENSE.md`: MIT license.
+| Project      | Action |
+| ------------ | ------ |
+| GitHub Pages | -      |
+
+
+## How it looks
+
+![Desktop Web SCreenshot](__docs/edge-desktop.png)
 
 ## Tech Stack
 
@@ -35,3 +39,20 @@ Then visit `http://localhost:8000`.
 
 - The page references external assets (fonts and images), so an internet connection is required for full rendering.
 - This repository currently has no build step or package dependencies.
+- 
+### Never indented for production
+
+This experiment is purely build for educational usage! I am not a musician, nor a graphic designer, nor a web developer. Learning is fun!
+
+## Authors
+
+Just me, [Tobi]([https://tscholze.github.io). It is not planned to update this experiment regulary.
+
+## Thanks to
+
+- [Phil](https://www.linkedin.com/in/philipp-skorpil-562363233/) for showing me some crazy AI tricks!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Dependencies or assets maybe licensed differently.
