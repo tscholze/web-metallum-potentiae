@@ -11,7 +11,7 @@
 
 ## How it looks
 
-![Desktop Web SCreenshot](__docs/edge-desktop.png)
+![Desktop web screenshot](__docs/edge-desktop.png)
 
 ## Tech Stack
 
@@ -24,8 +24,8 @@
 
 Open either HTML file directly in your browser:
 
-- `index.html` (German)
-- `index_en.html` (English)
+- `index_de.html` (German)
+- `index.html` (English)
 
 Or use any static file server, for example:
 
@@ -39,14 +39,14 @@ Then visit `http://localhost:8000`.
 
 - The page references external assets (fonts and images), so an internet connection is required for full rendering.
 - This repository currently has no build step or package dependencies.
-- 
-### Never indented for production
 
-This experiment is purely build for educational usage! I am not a musician, nor a graphic designer, nor a web developer. Learning is fun!
+### Never intended for production
+
+This experiment was built purely for educational purposes. I am not a musician, graphic designer, or web developer. Learning is fun!
 
 ## Authors
 
-Just me, [Tobi]([https://tscholze.github.io). It is not planned to update this experiment regulary.
+Just me, [Tobi](https://tscholze.github.io). It is not planned to update this experiment regularly.
 
 ## Thanks to
 
@@ -54,5 +54,5 @@ Just me, [Tobi]([https://tscholze.github.io). It is not planned to update this e
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-Dependencies or assets maybe licensed differently.
+This project is licensed under the MIT License. See [LICENSE.md](LICENSE.md) for details.
+Dependencies or assets may be licensed differently.
